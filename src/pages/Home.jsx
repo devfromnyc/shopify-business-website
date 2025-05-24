@@ -7,6 +7,9 @@ import ecommerce from "../assets/ecommerce.png";
 import FeaturedImages from "../components/sections/FeaturedImages";
 import { ServiceIcons } from "../components/sections/ServiceIcons";
 import Pricing from "../components/sections/Pricing";
+import Faq from "../components/sections/Faq";
+import { faqData } from "../utils/faqData";
+
 export const Home = () => {
   return (
     <>
@@ -49,6 +52,12 @@ export const Home = () => {
         planPrice={29}
         plan2Price={79}
         plan3Price={149}
+      />
+      <Faq
+        questions={faqData}
+        layout="column"
+        header="Frequently Asked Questions"
+        paragraphText="Find answers to common questions about our services and how we can help your business grow."
       />
     </>
   );
