@@ -2,50 +2,49 @@ import shopping2 from "../assets/shopping2.png";
 import shopping from "../assets/shopping.png";
 import onlineshopping from "../assets/onlineshopping.png";
 import ecommerce from "../assets/ecommerce.png";
-import photo1 from "../assets/photo-1607082350899-7e105aa886ae.avif";
-import photo2 from "../assets/photo-1647221598520-ce1d0da89985.avif";
-import photo3 from "../assets/photo-1542992015-4a0b729b1385.avif";
-import photo4 from "../assets/photo-1580828343064-fde4fc206bc6.avif";
+import ecommerceImage from "../assets/ecommerce.png";
+import shoppingImage from "../assets/shopping.png";
+import onlineShoppingImage from "../assets/onlineshopping.png";
 
 export const contentSections = [
   {
     id: "business",
-    title: "Business Solutions",
+    title: "Theme Customizations",
     icon: shopping2,
-    image: photo1,
-    heading: "Business Growth Solutions",
+    image: ecommerceImage,
+    heading: "Customize your theme",
     description:
-      "Scale deposits, corrosion, and excessive blowdown can have detrimental impacts upon your boiler system. Even a small reduction in system efficiency can have a significant effect on operating costs.",
+      "Not quite satisfied with your theme? Wish it was more flexible? See sections from other themes or websites that you'd like on your site? We can help!",
     ctaText: "Learn More",
   },
   {
     id: "digital",
-    title: "Digital Services",
+    title: "Business Projects",
     icon: shopping,
-    image: photo2,
-    heading: "Digital Transformation",
+    image: ecommerceImage,
+    heading: "Looking for a strategic partner?",
     description:
-      "Protecting your cooling water system from the ravages of corrosion, scale deposits, and microbiological growth can help maximize the life, efficiency, reliability, and safety of your system while keeping operating costs to a minimum.",
+      "Need development help part time, full time, any time? we are open to contract and project-based assignments. Let's Partner Up!",
     ctaText: "Learn More",
   },
   {
     id: "consulting",
-    title: "Consulting",
+    title: "Support Services",
     icon: onlineshopping,
-    image: photo3,
+    image: shoppingImage,
     heading: "Strategic Consulting",
     description:
-      "Not all process waters are the same. Depending upon the quality needed, water may require treatment to remove or manage contaminants that can cause product quality issues, manufacturing downtime, and increased production costs.",
+      "Looking to optimize your store's performance? From site speed and code-base improvements to strengthening your site's web accessibility (WCAG), we've got you covered.",
     ctaText: "Learn More",
   },
   {
     id: "support",
-    title: "Support Services",
+    title: "Store Setup",
     icon: ecommerce,
-    image: photo4,
-    heading: "Ongoing Support",
+    image: onlineShoppingImage,
+    heading: "Looking to get started with a Shopify Store?",
     description:
-      "Successful wastewater treatment involves a balance of removing pollutants, minimizing sludge handling/disposal costs, achieving effluent requirements, and promoting reuse.",
+      "We can help you with any part of the setup process. From choosing the right theme to adding products and setting up your store, you've come to the right place.",
     ctaText: "Learn More",
   },
 ];

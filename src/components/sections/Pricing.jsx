@@ -3,7 +3,7 @@ import { Icon } from "../snippets/Icon";
 
 const Pricing = ({ plan, plan2, plan3, planPrice, plan2Price, plan3Price }) => {
   return (
-    <div className="flex flex-col gap-4 px-12 py-8">
+    <div className="flex flex-col gap-4 px-12 py-8 md:min-h-screen">
       <h2 className="text-2xl font-bold text-left mb-4">Pricing</h2>
       <p className="text-gray-500 text-left mb-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.

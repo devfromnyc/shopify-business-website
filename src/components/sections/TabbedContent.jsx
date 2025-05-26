@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import { contentSections } from "../../utils/tabbedContentData";
 
-const TabbedContent = () => {
+const TabbedContent = ({ textOverImage }) => {
   const [activeTab, setActiveTab] = useState(0);
 
+  const textOverlayClasses = textOverImage
+    ? "absolute top-0 left-0 w-full h-full flex flex-col items-start justify-center px-4"
+    : "";
+
+  const imageSizingClasses = textOverImage
+    ? "w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+    : "w-full h-auto lg:h-96 xl:h-[600px] object-scale-down";
+
   return (
-    <div className="flex flex-col gap-8 px-12 py-16 bg-gray-50">
+    <div className="flex flex-col gap-8 px-12 py-16 bg-gray-50 md:min-h-screen">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          <span className="font-normal">Reliable</span> and{" "}
-          <span className="font-normal">Sustainable</span> Business Solutions
+          The All-In-One Shopify Solution
         </h2>
       </div>
 
@@ -27,7 +34,7 @@ const TabbedContent = () => {
               <img
                 src={section.icon}
                 alt={section.title}
-                className="w-8 h-8 mb-2 object-contain"
+                className="w-8 h-8 mb-2 object-scale-down"
               />
               <span className="text-sm font-semibold text-center">
                 {section.title}
@@ -37,28 +44,31 @@ const TabbedContent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 items-center">
+      <div className="flex flex-col lg:flex-row gap-8 items-center relative">
         <div className="lg:w-1/2">
           <img
             src={contentSections[activeTab].image}
             alt={contentSections[activeTab].heading}
-            className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+            className={`${imageSizingClasses}`}
           />
         </div>
 
-        <div className="lg:w-1/2 space-y-6 text-left">
+        <div
+          className={`lg:w-1/2 space-y-6 text-left ${
+            textOverImage ? "text-white" : "text-gray-900"
+          } ${textOverlayClasses}`}>
           <div className="flex items-center gap-3">
             <img
               src={contentSections[activeTab].icon}
               alt={contentSections[activeTab].heading}
               className="w-8 h-8 object-contain"
             />
-            <h3 className="text-2xl font-bold text-gray-900">
+            <h3 className="text-2xl font-bold">
               {contentSections[activeTab].heading}
             </h3>
           </div>
 
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed max-w-xl">
             {contentSections[activeTab].description}
           </p>
 
