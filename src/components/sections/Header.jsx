@@ -3,7 +3,7 @@ import React from "react";
 export const Header = () => {
   return (
     <nav className="bg-white shadow-lg">
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full px-12">
         <div className="flex items-center py-4 px-2">
           <a href="/" className="font-bold text-gray-800 text-2xl">
             Logo
