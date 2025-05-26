@@ -10,6 +10,13 @@ export const Header = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="flex justify-between items-center w-full px-4">
+        {/* Logo - Left on Desktop, Center on Mobile */}
+        <div className="flex items-center py-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-[50px] md:transform-none">
+          <a href="/" className="font-bold text-gray-800 text-2xl">
+            Logo
+          </a>
+        </div>
+
         {/* Mobile Hamburger Button - Left Side */}
         <div className="md:hidden flex items-center">
           <button
@@ -33,8 +40,8 @@ export const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Menu - Left Side */}
-        <div className="hidden md:flex items-center space-x-4">
+        {/* Desktop Menu - Center */}
+        <div className="hidden md:flex items-center justify-evenly min-w-[500px] space-x-4">
           <a
             href="/"
             className="text-gray-800 hover:text-gray-400 transition-colors">
@@ -54,13 +61,6 @@ export const Header = () => {
             href="/"
             className="text-gray-800 hover:text-gray-400 transition-colors">
             Contact
-          </a>
-        </div>
-
-        {/* Logo - Center */}
-        <div className="flex items-center py-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none">
-          <a href="/" className="font-bold text-gray-800 text-2xl">
-            Logo
           </a>
         </div>
 
