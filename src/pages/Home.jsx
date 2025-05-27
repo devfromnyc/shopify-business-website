@@ -29,11 +29,6 @@ export const Home = () => {
       />
       <TabbedContent />
       <ServicesPills direction="column" />
-      <ImageWithText
-        image={shopping2}
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
-        alignContent="left"
-      />
       <Faq
         questions={faqData}
         layout="column"
