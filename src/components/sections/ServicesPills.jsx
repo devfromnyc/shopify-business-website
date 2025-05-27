@@ -19,17 +19,17 @@ const ServicesPills = ({ direction }) => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 max-w-xl mx-auto my-0">
-          {ecommerceData.map((pill) => (
+          {ecommerceData.map((product) => (
             <div
-              key={pill.id}
-              className="product-pill flex justify-center items-center max-h-16 bg-blue-100 hover:bg-blue-200 text-blue-800 hover:text-blue-900 px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer hover:shadow-md">
-              {pill.title}
+              key={product.id}
+              className="product-pill flex justify-center items-center max-h-16 bg-[#96bf48]/10 hover:bg-[#96bf48]/20 text-[#96bf48] hover:text-[#7da63a] px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer hover:shadow-md">
+              {product.title}
             </div>
           ))}
         </div>
       </div>
       {/* <div className="text-center mt-12">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+        <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
           View All Services
         </button>
       </div> */}

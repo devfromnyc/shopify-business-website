@@ -8,7 +8,6 @@ import ServicesPills from "../components/sections/ServicesPills";
 import ContactUs from "../components/sections/ContactUs";
 import Footer from "../components/sections/Footer";
 import { faqData } from "../utils/faqData";
-import shopping2 from "../assets/shopping2.png";
 
 export const Home = () => {
   return (

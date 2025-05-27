@@ -21,7 +21,7 @@ export const Header = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMobileMenu}
-            className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 transition-colors"
+            className="text-[#96bf48] hover:text-gray-800 focus:outline-none focus:text-gray-800 transition-colors"
             aria-label="Toggle mobile menu">
             <svg
               className="h-6 w-6"
@@ -44,29 +44,29 @@ export const Header = () => {
         <div className="hidden md:flex items-center justify-evenly min-w-[500px] space-x-4">
           <a
             href="/"
-            className="text-gray-800 hover:text-gray-400 transition-colors">
+            className="text-[#96bf48] hover:text-gray-800 transition-colors">
             Home
           </a>
           <a
             href="/"
-            className="text-gray-800 hover:text-gray-400 transition-colors">
+            className="text-[#96bf48] hover:text-gray-800 transition-colors">
             About
           </a>
           <a
             href="/"
-            className="text-gray-800 hover:text-gray-400 transition-colors">
+            className="text-[#96bf48] hover:text-gray-800 transition-colors">
             Services
           </a>
           <a
             href="/"
-            className="text-gray-800 hover:text-gray-400 transition-colors">
+            className="text-[#96bf48] hover:text-gray-800 transition-colors">
             Contact
           </a>
         </div>
 
         {/* Desktop Get Started Button - Right Side */}
         <div className="hidden md:flex items-center py-4">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">
+          <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white font-bold py-2 px-4 rounded transition-colors">
             Get Started
           </button>
         </div>
@@ -81,26 +81,26 @@ export const Header = () => {
           <div className="px-4 pt-2 pb-4 space-y-2">
             <a
               href="/"
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md transition-colors">
+              className="block px-3 py-2 text-[#96bf48] hover:text-gray-800 hover:bg-green-50 rounded-md transition-colors">
               Home
             </a>
             <a
               href="/"
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md transition-colors">
+              className="block px-3 py-2 text-[#96bf48] hover:text-gray-800 hover:bg-green-50 rounded-md transition-colors">
               About
             </a>
             <a
               href="/"
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md transition-colors">
+              className="block px-3 py-2 text-[#96bf48] hover:text-gray-800 hover:bg-green-50 rounded-md transition-colors">
               Services
             </a>
             <a
               href="/"
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md transition-colors">
+              className="block px-3 py-2 text-[#96bf48] hover:text-gray-800 hover:bg-green-50 rounded-md transition-colors">
               Contact
             </a>
             <div className="pt-2">
-              <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">
+              <button className="w-full bg-[#96bf48] hover:bg-[#7da63a] text-white font-bold py-2 px-4 rounded transition-colors">
                 Get Started
               </button>
             </div>

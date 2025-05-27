@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "../snippets/Icon";
-import ecommerce from "../../assets/ecommerce.png";
+import intelligentShopping from "../../assets/intellingent-shopping.png";
 
 export const Hero = ({
   header,
@@ -37,11 +37,15 @@ export const Hero = ({
             <p>{bullet3Text}</p>
           </li>
         </ul>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+        <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white px-4 py-2 rounded-md transition-colors">
           Get Started
         </button>
       </div>
-      <img src={ecommerce} alt="ecommerce" className="w-1/2" />
+      <img
+        src={intelligentShopping}
+        alt="intelligent shopping"
+        className="w-1/2"
+      />
     </div>
   );
 };

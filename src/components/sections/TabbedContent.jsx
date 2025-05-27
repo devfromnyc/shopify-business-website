@@ -28,7 +28,7 @@ const TabbedContent = ({ textOverImage }) => {
               onClick={() => setActiveTab(index)}
               className={`flex flex-col items-center p-4 rounded-lg transition-all duration-300 min-w-[120px] ${
                 activeTab === index
-                  ? "bg-blue-500 text-white shadow-md"
+                  ? "bg-[#96bf48] text-white shadow-md"
                   : "bg-transparent text-gray-700 hover:bg-gray-100"
               }`}>
               <img
@@ -72,7 +72,7 @@ const TabbedContent = ({ textOverImage }) => {
             {contentSections[activeTab].description}
           </p>
 
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+          <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
             {contentSections[activeTab].ctaText}
           </button>
         </div>

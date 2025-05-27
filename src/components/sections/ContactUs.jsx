@@ -51,7 +51,7 @@ const ContactUs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96bf48] focus:border-[#96bf48] transition-colors"
                   required
                 />
               </div>
@@ -68,7 +68,7 @@ const ContactUs = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96bf48] focus:border-[#96bf48] transition-colors"
                   required
                 />
               </div>
@@ -85,7 +85,7 @@ const ContactUs = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96bf48] focus:border-[#96bf48] transition-colors"
                   required
                 />
               </div>
@@ -102,14 +102,14 @@ const ContactUs = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#96bf48] focus:border-[#96bf48] transition-colors resize-none"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                className="w-full bg-[#96bf48] hover:bg-[#7da63a] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Send Message
               </button>
             </form>
