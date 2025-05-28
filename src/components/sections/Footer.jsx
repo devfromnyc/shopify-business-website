@@ -2,40 +2,36 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-12 py-12">
+    <footer className="bg-[#355965] text-white">
+      <div className="max-w-7xl mx-auto px-8 md:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Your Business</h3>
-            <p className="text-gray-300 text-sm">
+            <p className="text-slate-200 text-sm">
               Providing innovative solutions to help your business grow and
               succeed in today's competitive market.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">Facebook</span>
-                📘
+                className="text-slate-200 hover:text-white transition-colors">
+                Facebook
               </a>
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                🐦
+                className="text-slate-200 hover:text-white transition-colors">
+                Twitter
               </a>
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                💼
+                className="text-slate-200 hover:text-white transition-colors">
+                LinkedIn
               </a>
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
-                <span className="sr-only">Instagram</span>
-                📷
+                className="text-slate-200 hover:text-white transition-colors">
+                Instagram
               </a>
             </div>
           </div>
@@ -47,28 +43,28 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Business Solutions
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Digital Services
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Consulting
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Support Services
                 </a>
               </li>
@@ -82,28 +78,28 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   About Us
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Our Team
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   Careers
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors">
+                  className="text-slate-200 hover:text-white transition-colors">
                   News & Blog
                 </a>
               </li>
@@ -113,7 +109,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
-            <div className="space-y-2 text-sm text-gray-300">
+            <div className="space-y-2 text-sm text-slate-200">
               <p>123 Business Street</p>
               <p>Suite 100</p>
               <p>City, State 12345</p>
@@ -136,25 +132,25 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        <div className="border-t border-slate-400 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-slate-200">
               © {new Date().getFullYear()} Your Business. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
+                className="text-slate-200 hover:text-white transition-colors">
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
+                className="text-slate-200 hover:text-white transition-colors">
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-gray-300 hover:text-white transition-colors">
+                className="text-slate-200 hover:text-white transition-colors">
                 Cookie Policy
               </a>
             </div>

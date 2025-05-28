@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "../snippets/Icon";
-import intelligentShopping from "../../assets/intellingent-shopping.png";
+import onlineshopping from "../../assets/onlineshopping.png";
 
 export const Hero = ({
   header,
@@ -12,13 +12,13 @@ export const Hero = ({
 }) => {
   return (
     <div
-      className={`bg-gray-100 h-screen flex items-center justify-center px-12 md:min-h-screen ${
+      className={`bg-gray-100 h-screen flex flex-col md:flex-row items-center justify-center md:mb-0 mb-36 px-8 md:px-12 md:min-h-screen ${
         alignContent === "left"
           ? "text-left justify-start"
           : "text-center justify-center"
       }`}>
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold">{header}</h1>
+        <h1 className="text-4xl font-bold md:mt-0 mt-12">{header}</h1>
         <p className="text-gray-500 mt-4">{subheader}</p>
         <ul
           className={`flex flex-col items-center gap-4 my-8 ${
@@ -37,14 +37,14 @@ export const Hero = ({
             <p>{bullet3Text}</p>
           </li>
         </ul>
-        <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white px-4 py-2 rounded-md transition-colors">
+        <button className="bg-[#355965] hover:bg-[#2a464f] text-white px-4 py-2 rounded-md transition-colors">
           Get Started
         </button>
       </div>
       <img
-        src={intelligentShopping}
-        alt="intelligent shopping"
-        className="w-1/2"
+        src={onlineshopping}
+        alt="onlineshopping"
+        className="w-full md:w-1/2 mt-8 md:mt-0"
       />
     </div>
   );

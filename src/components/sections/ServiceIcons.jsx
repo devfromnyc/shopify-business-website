@@ -10,7 +10,7 @@ export const ServiceIcons = ({
   header,
 }) => {
   return (
-    <div className="flex flex-col gap-4 px-12 py-8">
+    <div className="flex flex-col gap-4 px-8 md:px-12 py-8">
       <h2 className="text-2xl font-bold text-left mb-4">{header}</h2>
       <p className="text-gray-500 text-left mb-4">{paragraphText}</p>
       <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-28 py-12">

@@ -3,7 +3,7 @@ import { ecommerceData } from "../../utils/ecommerceData";
 
 const ServicesPills = ({ direction }) => {
   return (
-    <div className="flex flex-col justify-center items-center px-12 py-16 bg-white md:min-h-screen">
+    <div className="flex flex-col justify-center items-center px-8 md:px-12 py-16 bg-white md:min-h-screen">
       <div
         className={`max-w-7xl mx-auto ${
           direction === "row" ? "flex flex-col md:flex-row" : "flex flex-col"
@@ -22,14 +22,14 @@ const ServicesPills = ({ direction }) => {
           {ecommerceData.map((product) => (
             <div
               key={product.id}
-              className="product-pill flex justify-center items-center max-h-16 bg-[#96bf48]/10 hover:bg-[#96bf48]/20 text-[#96bf48] hover:text-[#7da63a] px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer hover:shadow-md">
+              className="product-pill flex justify-center items-center max-h-16 bg-[#355965]/10 hover:bg-[#355965]/20 text-[#355965] hover:text-[#2a464f] px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 cursor-pointer hover:shadow-md">
               {product.title}
             </div>
           ))}
         </div>
       </div>
       {/* <div className="text-center mt-12">
-        <button className="bg-[#96bf48] hover:bg-[#7da63a] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+        <button className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
           View All Services
         </button>
       </div> */}

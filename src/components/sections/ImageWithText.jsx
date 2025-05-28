@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageWithText = ({ image, text, alignContent }) => {
   return (
-    <div className="mx-auto py-8 px-12 md:min-h-screen">
+    <div className="mx-auto py-8 px-8 md:px-12 md:min-h-screen">
       <div
         className={`flex flex-col gap-4 ${
           alignContent === "left"

@@ -27,7 +27,7 @@ const Faq = ({
         : "flex flex-col md:flex-row gap-8 items-center";
 
     return (
-      <div className="flex flex-col gap-4 px-12 py-8 md:min-h-screen">
+      <div className="flex flex-col gap-4 px-8 md:px-12 py-8 md:min-h-screen">
         <div className={imageLayoutClasses}>
           <div className="w-full md:w-1/2">
             <img
@@ -73,8 +73,42 @@ const Faq = ({
   }
 
   // Original layout when no image is provided
+  if (layout === "row" || layout === "row-reverse") {
+    return (
+      <div className="flex flex-col gap-4 px-8 md:px-12 py-8 md:min-h-screen">
+        <h2 className="text-2xl font-bold text-left mb-4">{header}</h2>
+        <p className="text-gray-500 text-left mb-6">{paragraphText}</p>
+
+        <div className={layoutClasses}>
+          {questions.map((item, index) => (
+            <div
+              key={index}
+              className={`${layout === "row" ? "flex-1" : "w-full"}`}>
+              <button
+                onClick={() => toggleQuestion(index)}
+                className="w-full text-left p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex justify-between items-center">
+                <span className="font-semibold text-gray-800">
+                  {item.question}
+                </span>
+                <span className="text-xl font-bold text-gray-600 ml-4">
+                  {openIndex === index ? "−" : "+"}
+                </span>
+              </button>
+
+              {openIndex === index && (
+                <div className="mt-2 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                  <p className="text-gray-700 text-left">{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col gap-4 px-12 py-8 md:min-h-screen">
+    <div className="flex flex-col gap-4 px-8 md:px-12 py-8 md:min-h-screen">
       <h2 className="text-2xl font-bold text-left mb-4">{header}</h2>
       <p className="text-gray-500 text-left mb-6">{paragraphText}</p>
 

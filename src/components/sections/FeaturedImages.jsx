@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturedImages = ({ image, text, alignContent }) => {
   return (
-    <div className="mx-auto py-8 px-12">
+    <div className="mx-auto py-8 px-8 md:px-12">
       <div
         className={`flex gap-4 ${
           alignContent === "left" ? "flex-row-reverse" : "flex-row"
