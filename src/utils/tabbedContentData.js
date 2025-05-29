@@ -1,7 +1,7 @@
 import themeEditor from "../assets/theme-editor.png";
 import inventory from "../assets/inventory.png";
-import shopify from "../assets/shopify.avif";
 import programmer from "../assets/programmer.png";
+import storeopening from "../assets/store-opening.png";
 
 export const contentSections = [
   {
@@ -34,7 +34,7 @@ export const contentSections = [
   {
     id: "support",
     title: "Store Setup",
-    image: shopify,
+    image: storeopening,
     heading: "Looking to get started with a Shopify Store?",
     description:
       "We can help you with any part of the setup process. From choosing the right theme to adding products and setting up your store, you've come to the right place.",

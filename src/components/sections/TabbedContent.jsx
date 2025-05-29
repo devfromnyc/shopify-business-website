@@ -13,14 +13,14 @@ const TabbedContent = ({ textOverImage }) => {
     : "w-full h-auto lg:h-96 xl:h-[600px] object-scale-down";
 
   return (
-    <div className="flex flex-col gap-4 md:gap-8 px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
-      <div className="text-center mb-4 md:mb-8">
+    <div className="flex flex-col px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
+      <div className="text-center mb-4 md:mb-8 xl:mt-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-0 md:mb-4">
           The All-In-One Shopify Solution
         </h2>
       </div>
 
-      <div className="tabs-image-fill flex md:flex-row flex-col justify-center mb-8">
+      <div className="tabs-image-fil flex md:flex-row flex-col justify-center mb-6">
         <div className="flex flex-wrap justify-center gap-4 bg-white rounded-lg p-4 md:p-2 shadow-lg">
           {contentSections.map((section, index) => (
             <button
