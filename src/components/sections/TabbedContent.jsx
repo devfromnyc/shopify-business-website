@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { contentSections } from "../../utils/tabbedContentData";
 import "./TabbedContent.css";
 
 const TabbedContent = ({ textOverImage }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          setAnimationKey(1); // Trigger initial animation
+          // Disconnect observer after first trigger to prevent re-animation
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+        rootMargin: "0px 0px -50px 0px", // Trigger slightly before the section is fully visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
 
   const handleTabChange = (index) => {
     setActiveTab(index);
@@ -21,7 +46,9 @@ const TabbedContent = ({ textOverImage }) => {
     : "w-full h-auto lg:h-96 xl:h-[600px] object-scale-down";
 
   return (
-    <div className="flex flex-col px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
+    <div
+      ref={sectionRef}
+      className="flex flex-col px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
       <div className="text-center mb-4 md:mb-8 xl:mt-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-0 md:mb-4">
           The All-In-One Shopify Solution
@@ -54,14 +81,20 @@ const TabbedContent = ({ textOverImage }) => {
             key={`image-${animationKey}`}
             src={contentSections[activeTab].image}
             alt={contentSections[activeTab].heading}
-            className={`${imageSizingClasses} animate-[fadeIn_1s_ease-out]`}
+            className={`${imageSizingClasses} ${
+              animationKey > 0 ? "animate-[fadeIn_1s_ease-out]" : "opacity-0"
+            }`}
           />
         </div>
 
         {/* Text Content - Slides in from right */}
         <div
           key={`content-${animationKey}`}
-          className={`lg:w-1/2 space-y-6 text-left animate-[slideInRight_1s_ease-out] ${
+          className={`lg:w-1/2 space-y-6 text-left ${
+            animationKey > 0
+              ? "animate-[slideInRight_1s_ease-out]"
+              : "opacity-0"
+          } ${
             textOverImage ? "text-white" : "text-gray-900"
           } ${textOverlayClasses}`}>
           <div>
