@@ -1,0 +1,44 @@
+/* Custom animations for ServicesPills component */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays for each service pill */
+.service-pill-animate-1 {
+  animation: fadeInUp 0.6s ease-in 0.1s both;
+}
+
+.service-pill-animate-2 {
+  animation: fadeInUp 0.6s ease-in 0.2s both;
+}
+
+.service-pill-animate-3 {
+  animation: fadeInUp 0.6s ease-in 0.3s both;
+}
+
+.service-pill-animate-4 {
+  animation: fadeInUp 0.6s ease-in 0.4s both;
+}
+
+.service-pill-animate-5 {
+  animation: fadeInUp 0.6s ease-in 0.5s both;
+}
+
+.service-pill-animate-6 {
+  animation: fadeInUp 0.6s ease-in 0.6s both;
+}
+
+.service-pill-animate-7 {
+  animation: fadeInUp 0.6s ease-in 0.7s both;
+}
+
+.service-pill-animate-8 {
+  animation: fadeInUp 0.6s ease-in 0.8s both;
+}

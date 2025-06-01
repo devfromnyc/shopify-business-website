@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../snippets/Icon";
 import onlineshopping from "../../assets/onlineshopping.png";
+import "./Hero.css";
 
 export const Hero = ({
   header,
@@ -17,7 +18,7 @@ export const Hero = ({
           ? "text-left justify-start"
           : "text-center justify-center"
       }`}>
-      <div className="container mx-auto">
+      <div className="container mx-auto animate-[slideInLeft_1s_ease-out]">
         <h1 className="text-4xl font-bold md:mt-0 mt-12">{header}</h1>
         <p className="text-gray-500 mt-4">{subheader}</p>
         <ul
@@ -44,7 +45,7 @@ export const Hero = ({
       <img
         src={onlineshopping}
         alt="onlineshopping"
-        className="w-full md:w-1/2 mt-8 md:mt-0"
+        className="w-full md:w-1/2 mt-8 md:mt-0 animate-[slideInRight_1s_ease-out]"
       />
     </div>
   );
