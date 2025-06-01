@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { contentSections } from "../../utils/tabbedContentData";
+import "./TabbedContent.css";
 
 const TabbedContent = ({ textOverImage }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const handleTabChange = (index) => {
+    setActiveTab(index);
+    // Increment animation key to trigger re-animation
+    setAnimationKey((prev) => prev + 1);
+  };
 
   const textOverlayClasses = textOverImage
     ? "absolute top-0 left-0 w-full h-full flex flex-col items-start justify-center px-4"
@@ -25,7 +33,7 @@ const TabbedContent = ({ textOverImage }) => {
           {contentSections.map((section, index) => (
             <button
               key={section.id}
-              onClick={() => setActiveTab(index)}
+              onClick={() => handleTabChange(index)}
               className={`flex flex-col items-center p-4 rounded-lg transition-all duration-300 min-w-[120px] ${
                 activeTab === index
                   ? "bg-[#355965] text-white shadow-md"
@@ -40,16 +48,20 @@ const TabbedContent = ({ textOverImage }) => {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4 md:gap-8 items-center relative">
+        {/* Image - Fades in */}
         <div className="lg:w-1/2">
           <img
+            key={`image-${animationKey}`}
             src={contentSections[activeTab].image}
             alt={contentSections[activeTab].heading}
-            className={`${imageSizingClasses}`}
+            className={`${imageSizingClasses} animate-[fadeIn_1s_ease-out]`}
           />
         </div>
 
+        {/* Text Content - Slides in from right */}
         <div
-          className={`lg:w-1/2 space-y-6 text-left ${
+          key={`content-${animationKey}`}
+          className={`lg:w-1/2 space-y-6 text-left animate-[slideInRight_1s_ease-out] ${
             textOverImage ? "text-white" : "text-gray-900"
           } ${textOverlayClasses}`}>
           <div>
