@@ -29,14 +29,7 @@ export const Home = () => {
       />
       <TabbedContent />
       <ServicesPills direction="column" />
-      <Pricing
-        plan="Basic"
-        planPrice="199"
-        plan2="Professional"
-        plan2Price="399"
-        plan3="Enterprise"
-        plan3Price="799"
-      />
+      <Pricing />
       <Faq
         questions={faqData}
         layout="column"

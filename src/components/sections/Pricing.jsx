@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Icon } from "../snippets/Icon";
+import { pricingData } from "../../utils/pricingData";
 
-const Pricing = ({ plan, plan2, plan3, planPrice, plan2Price, plan3Price }) => {
+const Pricing = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -42,195 +43,44 @@ const Pricing = ({ plan, plan2, plan3, planPrice, plan2Price, plan3Price }) => {
         className={`text-gray-500 text-left mb-4 transition-all duration-700 ease-out delay-100 ${
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
         }`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        Choose the perfect plan for your business needs and start growing today.
       </p>
       <div className="flex flex-col md:flex-row gap-12">
-        <div
-          className={`flex flex-col gap-4 pricing-card max-w-96 bg-[#355965] rounded-xl shadow-md p-6 transition-all duration-700 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
-          <h3 className="text-xl font-bold text-left mb-4 text-white">
-            {plan}
-          </h3>
-          <p className="text-2xl font-semibold text-left mb-4 text-white">
-            <sup>$</sup>
-            {planPrice}/month
-          </p>
-          <p className="text-slate-100 text-left mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quos.
-          </p>
-          <ul className="space-y-8">
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-          </ul>
-        </div>
-        <div
-          className={`flex flex-col gap-4 pricing-card max-w-96 bg-[#355965] rounded-xl shadow-md p-6 transition-all duration-700 ease-out delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
-          <h3 className="text-xl font-bold text-left mb-4 text-white">
-            {plan2}
-          </h3>
-          <p className="text-2xl font-semibold text-left mb-4 text-white">
-            <sup>$</sup>
-            {plan2Price}/month
-          </p>
-          <p className="text-slate-100 text-left mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quos.
-          </p>
-          <ul className="space-y-8">
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-          </ul>
-        </div>
-        <div
-          className={`flex flex-col gap-4 pricing-card max-w-96 bg-[#355965] rounded-xl shadow-md p-6 transition-all duration-700 ease-out delay-400 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
-          <h3 className="text-xl font-bold text-left mb-4 text-white">
-            {plan3}
-          </h3>
-          <p className="text-2xl font-semibold text-left mb-4 text-white">
-            <sup>$</sup>
-            {plan3Price}/month
-          </p>
-          <p className="text-slate-100 text-left mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quos.
-          </p>
-          <ul className="space-y-8">
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 text-left">
-              <Icon
-                iconType="checkmark-rounded"
-                borderColor="border-slate-50"
-                iconColor="text-white"
-              />
-              <span className="inline-block text-slate-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
-              </span>
-            </li>
-          </ul>
-        </div>
+        {pricingData.map((pricingTier, index) => (
+          <div
+            key={pricingTier.id}
+            className={`flex flex-col gap-4 pricing-card max-w-96 bg-[#355965] rounded-xl shadow-md p-6 transition-all duration-700 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: `${200 + index * 200}ms` }}>
+            <h3 className="text-xl font-bold text-left mb-4 text-white">
+              {pricingTier.plan}
+            </h3>
+            <p className="text-2xl font-semibold text-left mb-4 text-white">
+              <sup>$</sup>
+              {pricingTier.price}/month
+            </p>
+            <p className="text-slate-100 text-left mb-4">
+              {pricingTier.description}
+            </p>
+            <ul className="space-y-8">
+              {pricingTier.features.map((feature, featureIndex) => (
+                <li
+                  key={featureIndex}
+                  className="flex items-center gap-4 text-left">
+                  <Icon
+                    iconType="checkmark-rounded"
+                    borderColor="border-slate-50"
+                    iconColor="text-white"
+                  />
+                  <span className="inline-block text-slate-50">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );
