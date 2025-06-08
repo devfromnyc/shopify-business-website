@@ -12,7 +12,7 @@ export const Header = () => {
       <div className="flex justify-between items-center w-full px-4">
         {/* Logo - Left on Desktop, Center on Mobile */}
         <div className="flex items-center py-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-[50px] md:transform-none">
-          <a href="/" className="font-bold text-gray-800 text-2xl">
+          <a href="#home" className="font-bold text-gray-800 text-2xl">
             Logo
           </a>
         </div>
@@ -41,24 +41,29 @@ export const Header = () => {
         </div>
 
         {/* Desktop Menu - Center */}
-        <div className="hidden md:flex items-center justify-evenly min-w-[500px] space-x-4">
+        <div className="hidden md:flex items-center justify-evenly min-w-[600px] space-x-4">
           <a
-            href="/"
+            href="#home"
             className="text-[#355965] hover:text-gray-800 transition-colors">
             Home
           </a>
           <a
-            href="/"
+            href="#about"
             className="text-[#355965] hover:text-gray-800 transition-colors">
             About
           </a>
           <a
-            href="/"
+            href="#services"
             className="text-[#355965] hover:text-gray-800 transition-colors">
             Services
           </a>
           <a
-            href="/"
+            href="#pricing"
+            className="text-[#355965] hover:text-gray-800 transition-colors">
+            Pricing
+          </a>
+          <a
+            href="#contact"
             className="text-[#355965] hover:text-gray-800 transition-colors">
             Contact
           </a>
@@ -66,9 +71,11 @@ export const Header = () => {
 
         {/* Desktop Get Started Button - Right Side */}
         <div className="hidden md:flex items-center py-4">
-          <button className="bg-[#355965] hover:bg-[#2a464f] text-white font-bold py-2 px-4 rounded transition-colors">
+          <a
+            href="#contact"
+            className="bg-[#355965] hover:bg-[#2a464f] text-white font-bold py-2 px-4 rounded transition-colors">
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Mobile Spacer - Right Side (to balance hamburger on left) */}
@@ -80,29 +87,42 @@ export const Header = () => {
         <div className="md:hidden bg-white border-t border-gray-200 absolute top-full left-0 right-0 z-50 shadow-lg">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <a
-              href="/"
-              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors">
+              href="#home"
+              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </a>
             <a
-              href="/"
-              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors">
+              href="#about"
+              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}>
               About
             </a>
             <a
-              href="/"
-              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors">
+              href="#services"
+              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}>
               Services
             </a>
             <a
-              href="/"
-              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors">
+              href="#pricing"
+              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}>
+              Pricing
+            </a>
+            <a
+              href="#contact"
+              className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}>
               Contact
             </a>
             <div className="pt-2">
-              <button className="w-full bg-[#355965] hover:bg-[#2a464f] text-white font-bold py-2 px-4 rounded transition-colors">
+              <a
+                href="#contact"
+                className="block w-full bg-[#355965] hover:bg-[#2a464f] text-white font-bold py-2 px-4 rounded transition-colors text-center"
+                onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </div>

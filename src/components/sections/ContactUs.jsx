@@ -22,7 +22,9 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
+    <div
+      id="contact"
+      className="flex flex-col px-8 md:px-12 py-16 bg-gray-50 md:min-h-screen">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>

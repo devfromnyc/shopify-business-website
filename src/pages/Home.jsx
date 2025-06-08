@@ -5,6 +5,7 @@ import ImageWithText from "../components/sections/ImageWithText";
 import Faq from "../components/sections/Faq";
 import TabbedContent from "../components/sections/TabbedContent";
 import ServicesPills from "../components/sections/ServicesPills";
+import Pricing from "../components/sections/Pricing";
 import ContactUs from "../components/sections/ContactUs";
 import Footer from "../components/sections/Footer";
 import { faqData } from "../utils/faqData";
@@ -28,6 +29,14 @@ export const Home = () => {
       />
       <TabbedContent />
       <ServicesPills direction="column" />
+      <Pricing
+        plan="Basic"
+        planPrice="199"
+        plan2="Professional"
+        plan2Price="399"
+        plan3="Enterprise"
+        plan3Price="799"
+      />
       <Faq
         questions={faqData}
         layout="column"

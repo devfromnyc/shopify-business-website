@@ -30,6 +30,7 @@ const ServicesPills = ({ direction }) => {
 
   return (
     <div
+      id="services"
       ref={sectionRef}
       className="flex flex-col justify-center items-center px-8 md:px-12 py-16 bg-white md:min-h-screen">
       <div

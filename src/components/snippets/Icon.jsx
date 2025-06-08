@@ -10,6 +10,9 @@ export const Icon = ({
     if (color === "text-blue-50") {
       return "brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(1012%) hue-rotate(182deg) brightness(104%) contrast(94%)";
     }
+    if (color === "text-white" || color === "text-slate-50") {
+      return "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)";
+    }
     return "";
   };
 

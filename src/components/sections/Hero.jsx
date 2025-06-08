@@ -13,6 +13,7 @@ export const Hero = ({
 }) => {
   return (
     <div
+      id="home"
       className={`bg-gray-100 h-screen flex flex-col md:flex-row items-center justify-center md:mb-0 mb-36 px-8 md:px-12 md:min-h-screen ${
         alignContent === "left"
           ? "text-left justify-start"
@@ -38,9 +39,11 @@ export const Hero = ({
             <p>{bullet3Text}</p>
           </li>
         </ul>
-        <button className="bg-[#355965] hover:bg-[#2a464f] text-white px-4 py-2 rounded-md transition-colors">
+        <a
+          href="#contact"
+          className="bg-[#355965] hover:bg-[#2a464f] text-white px-4 py-2 rounded-md transition-colors">
           Get Started
-        </button>
+        </a>
       </div>
       <img
         src={onlineshopping}
