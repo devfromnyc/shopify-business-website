@@ -14,15 +14,6 @@ export const contentSections = [
     ctaText: "Learn More",
   },
   {
-    id: "digital",
-    title: "Partnership",
-    image: inventory,
-    heading: "Looking for a strategic partner?",
-    description:
-      "Need development help part time, full time, any time? we are open to contract and project-based assignments. Let's Partner Up!",
-    ctaText: "Learn More",
-  },
-  {
     id: "consulting",
     title: "Extending Shopify",
     image: programmer,
@@ -38,6 +29,15 @@ export const contentSections = [
     heading: "Looking to get started with a Shopify Store?",
     description:
       "We can help you with any part of the setup process. From choosing the right theme to adding products and setting up your store, you've come to the right place.",
+    ctaText: "Learn More",
+  },
+  {
+    id: "digital",
+    title: "Partnership",
+    image: inventory,
+    heading: "Looking for a strategic partner?",
+    description:
+      "Need development help part time, full time, any time? we are open to contract and project-based assignments. Let's Partner Up!",
     ctaText: "Learn More",
   },
 ];

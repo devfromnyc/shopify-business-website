@@ -108,11 +108,19 @@ const TabbedContent = ({ textOverImage }) => {
             {contentSections[activeTab].description}
           </p>
 
-          <Link
-            to="/shopify-learn-more"
-            className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-            {contentSections[activeTab].ctaText}
-          </Link>
+          {contentSections[activeTab].id === "digital" ? (
+            <a
+              href="#contact"
+              className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              {contentSections[activeTab].ctaText}
+            </a>
+          ) : (
+            <Link
+              to="/shopify-learn-more"
+              className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              {contentSections[activeTab].ctaText}
+            </Link>
+          )}
         </div>
       </div>
     </div>

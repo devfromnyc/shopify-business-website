@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,9 +13,9 @@ export const Header = () => {
       <div className="flex justify-between items-center w-full px-4">
         {/* Logo - Left on Desktop, Center on Mobile */}
         <div className="flex items-center py-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-[50px] md:transform-none">
-          <a href="#home" className="font-bold text-gray-800 text-2xl">
+          <Link to="/" className="font-bold text-gray-800 text-2xl">
             Logo
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Button - Left Side */}
@@ -42,11 +43,11 @@ export const Header = () => {
 
         {/* Desktop Menu - Center */}
         <div className="hidden md:flex items-center justify-evenly min-w-[600px] space-x-4">
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="text-[#355965] hover:text-gray-800 transition-colors">
             Home
-          </a>
+          </Link>
           <a
             href="#about"
             className="text-[#355965] hover:text-gray-800 transition-colors">
@@ -86,12 +87,12 @@ export const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 absolute top-full left-0 right-0 z-50 shadow-lg">
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}>
               Home
-            </a>
+            </Link>
             <a
               href="#about"
               className="block px-3 py-2 text-[#355965] hover:text-gray-800 hover:bg-slate-50 rounded-md transition-colors"
