@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../snippets/Icon";
 import onlineshopping from "../../assets/onlineshopping.png";
+import themeEditor from "../../assets/theme-editor.png";
 import "./Hero.css";
 
 export const Hero = ({
@@ -10,10 +11,30 @@ export const Hero = ({
   bullet2Text,
   bullet3Text,
   alignContent,
+  heroImage,
+  sectionId = "home",
 }) => {
+  const getHeroImage = () => {
+    switch (heroImage) {
+      case "themeEditor":
+        return themeEditor;
+      default:
+        return onlineshopping;
+    }
+  };
+
+  const getImageAlt = () => {
+    switch (heroImage) {
+      case "themeEditor":
+        return "theme editor";
+      default:
+        return "onlineshopping";
+    }
+  };
+
   return (
     <div
-      id="home"
+      id={sectionId}
       className={`bg-gray-100 h-screen flex flex-col md:flex-row items-center justify-center md:mb-0 mb-36 px-8 md:px-12 md:min-h-screen ${
         alignContent === "left"
           ? "text-left justify-start"
@@ -46,8 +67,8 @@ export const Hero = ({
         </a>
       </div>
       <img
-        src={onlineshopping}
-        alt="onlineshopping"
+        src={getHeroImage()}
+        alt={getImageAlt()}
         className="w-full md:w-1/2 mt-8 md:mt-0 animate-[slideInRight_1s_ease-out]"
       />
     </div>

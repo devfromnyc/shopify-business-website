@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { contentSections } from "../../utils/tabbedContentData";
 import "./TabbedContent.css";
 
@@ -107,9 +108,11 @@ const TabbedContent = ({ textOverImage }) => {
             {contentSections[activeTab].description}
           </p>
 
-          <button className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+          <Link
+            to="/shopify-learn-more"
+            className="bg-[#355965] hover:bg-[#2a464f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
             {contentSections[activeTab].ctaText}
-          </button>
+          </Link>
         </div>
       </div>
     </div>

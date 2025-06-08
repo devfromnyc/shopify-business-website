@@ -7,7 +7,6 @@ import TabbedContent from "../components/sections/TabbedContent";
 import ServicesPills from "../components/sections/ServicesPills";
 import Pricing from "../components/sections/Pricing";
 import ContactUs from "../components/sections/ContactUs";
-import Footer from "../components/sections/Footer";
 import { faqData } from "../utils/faqData";
 
 export const Home = () => {
@@ -37,7 +36,6 @@ export const Home = () => {
         paragraphText="Find answers to common questions about our services and how we can help your business grow."
       />
       <ContactUs />
-      <Footer />
     </>
   );
 };
