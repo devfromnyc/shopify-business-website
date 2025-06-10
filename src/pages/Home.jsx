@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Hero } from "../components/sections/Hero";
 import TextBlock from "../components/sections/TextBlock";
-import ImageWithText from "../components/sections/ImageWithText";
 import Faq from "../components/sections/Faq";
 import TabbedContent from "../components/sections/TabbedContent";
 import ServicesPills from "../components/sections/ServicesPills";

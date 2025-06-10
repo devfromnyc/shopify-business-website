@@ -1,0 +1,30 @@
+/* Custom animations for LayoutTabbedContent component */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ensure smooth transitions for grid layout changes */
+.grid {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Card hover effects */
+.group:hover .aspect-video img {
+  transform: scale(1.05);
+}
