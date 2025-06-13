@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MobileCarousel.css";
 
-const MobileCarousel = ({ items }) => {
+const MobileCarousel = ({ items = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -9,125 +9,177 @@ const MobileCarousel = ({ items }) => {
 
   const minSwipeDistance = 50;
 
-  const onTouchStart = (e) => {
+  const handleTouchStart = (e) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e) => {
+  const handleTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
-  const onTouchEnd = () => {
+  const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      goToNext();
+      handleNext();
     }
     if (isRightSwipe) {
-      goToPrevious();
+      handlePrevious();
     }
   };
 
-  const goToSlide = (index) => {
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === items.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handleIndicatorClick = (index) => {
     setCurrentIndex(index);
   };
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-  };
-
   return (
-    <div
-      className="mobile-carousel"
-      ref={carouselRef}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}>
-      <button
-        className="carousel-arrow carousel-arrow-prev"
-        onClick={goToPrevious}
-        aria-label="Previous slide">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M15 18L9 12L15 6"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
-      <button
-        className="carousel-arrow carousel-arrow-next"
-        onClick={goToNext}
-        aria-label="Next slide">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9 6L15 12L9 18"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
+    <div className="mobile-carousel" ref={carouselRef}>
       <div
         className="carousel-container"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {items.map((item, index) => (
-          <div key={item.id} className="carousel-slide">
-            <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-[#355965] transition-all duration-300">
-              <div className="aspect-video w-full overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-[#355965] transition-colors duration-200">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <span className="text-[#355965] text-sm font-medium group-hover:text-[#2a464f] transition-colors duration-200">
-                    Learn More →
-                  </span>
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}>
+        {/* Navigation Arrows */}
+        <button
+          className="carousel-arrow carousel-arrow-left"
+          onClick={handlePrevious}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        <button
+          className="carousel-arrow carousel-arrow-right"
+          onClick={handleNext}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+
+        {/* Slides */}
+        <div
+          className="carousel-slides"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}>
+          {items.map((item) => (
+            <div key={item.id} className="carousel-slide">
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+                {/* Image Container */}
+                <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Content Container */}
+                <div className="p-4 flex flex-col">
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm line-clamp-2 mb-4">
+                    {item.description}
+                  </p>
+
+                  {/* Price and Action */}
+                  <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-lg font-bold text-[#355965]">
+                        ${item.price.toFixed(2)}
+                      </span>
+                      {item.originalPrice && (
+                        <span className="text-sm text-gray-500 line-through">
+                          ${item.originalPrice.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+                    <button
+                      className={`w-full px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                        item.inStock
+                          ? "bg-[#355965] text-white hover:bg-[#2a464f]"
+                          : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      }`}
+                      disabled={!item.inStock}>
+                      {item.inStock ? "Add to Cart" : "Out of Stock"}
+                    </button>
+                  </div>
+
+                  {/* Additional Info */}
+                  <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+                    <span className="flex items-center">
+                      <svg
+                        className="w-4 h-4 mr-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      {item.rating} ({item.reviewCount})
+                    </span>
+                    <span
+                      className={
+                        item.inStock ? "text-green-600" : "text-red-600"
+                      }>
+                      {item.inStock ? "In Stock" : "Out of Stock"}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="carousel-indicators">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            className={`indicator ${currentIndex === index ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
+        {/* Indicators */}
+        <div className="carousel-indicators">
+          {items.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-indicator ${
+                currentIndex === index ? "active" : ""
+              }`}
+              onClick={() => handleIndicatorClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
