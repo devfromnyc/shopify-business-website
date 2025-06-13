@@ -1,0 +1,82 @@
+.mobile-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.3s ease-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #355965;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: #355965;
+  color: white;
+}
+
+.carousel-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.carousel-arrow-prev {
+  left: 0.5rem;
+}
+
+.carousel-arrow-next {
+  right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-carousel {
+    display: none;
+  }
+}
