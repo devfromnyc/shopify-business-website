@@ -1,3 +1,8 @@
+import sneakers1 from "../assets/sneakers1.avif";
+import sneakers2 from "../assets/sneakers2.avif";
+import sneakers3 from "../assets/sneakers3.avif";
+import sneakers4 from "../assets/sneakers4.avif";
+
 export const desktopLayoutOptions = [
   {
     id: "four-per-row",
@@ -38,50 +43,50 @@ export const mobileLayoutOptions = [
 export const contentCards = [
   {
     id: 1,
-    image: "/src/assets/store-opening.png",
-    title: "Lorem Ipsum Dolor",
+    image: sneakers1,
+    title: "Premium Sneakers",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "High-quality sneakers with superior comfort and style. Perfect for everyday wear.",
     price: 99.99,
     originalPrice: 129.99,
-    rating: 4.8,
-    reviewCount: 120,
+    rating: 4.5,
+    reviewCount: 128,
     inStock: true,
   },
   {
     id: 2,
-    image: "/src/assets/theme-editor.png",
-    title: "Sit Amet Consectetur",
+    image: sneakers2,
+    title: "Sport Edition",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-    price: 149.99,
-    originalPrice: 199.99,
-    rating: 4.5,
-    reviewCount: 85,
+      "Designed for performance and durability. Ideal for athletes and sports enthusiasts.",
+    price: 89.99,
+    originalPrice: 119.99,
+    rating: 4.8,
+    reviewCount: 95,
     inStock: true,
   },
   {
     id: 3,
-    image: "/src/assets/shopping-bold.png",
-    title: "Adipiscing Elit Sed",
+    image: sneakers3,
+    title: "Casual Collection",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "Stylish and comfortable sneakers for casual outings. Versatile design for any occasion.",
     price: 79.99,
     originalPrice: 99.99,
-    rating: 4.9,
-    reviewCount: 210,
-    inStock: false,
+    rating: 4.3,
+    reviewCount: 76,
+    inStock: true,
   },
   {
     id: 4,
-    image: "/src/assets/rocket.avif",
-    title: "Eiusmod Tempor",
+    image: sneakers4,
+    title: "Limited Edition",
     description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
-    price: 199.99,
-    originalPrice: 249.99,
-    rating: 4.7,
-    reviewCount: 156,
-    inStock: true,
+      "Exclusive design with premium materials. A must-have for sneaker collectors.",
+    price: 149.99,
+    originalPrice: 199.99,
+    rating: 4.9,
+    reviewCount: 42,
+    inStock: false,
   },
 ];

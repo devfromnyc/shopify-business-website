@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero } from "../components/sections/Hero";
 import LayoutTabbedContent from "../components/sections/LayoutTabbedContent";
+import StatsSection from "../components/sections/StatsSection";
 import Pricing from "../components/sections/Pricing";
 import ContactUs from "../components/sections/ContactUs";
 
@@ -18,6 +19,7 @@ export const ShopifyLearnMore = () => {
         sectionId="shopify-hero"
       />
       <LayoutTabbedContent />
+      <StatsSection />
       <Pricing />
       <ContactUs />
     </>

@@ -145,15 +145,15 @@ const LayoutTabbedContent = () => {
       className="flex flex-col px-8 md:px-12 py-16 bg-gray-50">
       <div className="text-center mb-4 md:mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Unlock the flexibility you never knew you needed
+          Flexibility you never knew you needed
         </h2>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
-          Shopify's customizer is very powerful and leaves the door open for us
-          to add almost any feature you need to extend your theme's
-          capabilities.
+          Shopify's customizer is very powerful and allows us to add almost any
+          feature you need to extend your theme's capabilities.
           <br />
-          Toggle between the different layouts to get an idea of what the
-          (endless) possibilities are!
+          <br />
+          Toggle between the different layouts below as an example of what
+          (endless) possibilities are! Hint: Check mobile view too!
         </p>
       </div>
 

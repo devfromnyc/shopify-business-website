@@ -1,0 +1,10 @@
+/* Essential custom styles that cannot be achieved with Tailwind */
+
+/* Hover effects for the progress circle */
+.circular-progress:hover .circular-progress-circle {
+  filter: brightness(1.1);
+}
+
+.circular-progress:hover .text-2xl {
+  color: #355965;
+}
