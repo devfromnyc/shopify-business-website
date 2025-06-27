@@ -1,7 +1,7 @@
 import React from "react";
 import { Hero } from "../components/sections/Hero";
 import LayoutTabbedContent from "../components/sections/LayoutTabbedContent";
-import Stats from "../components/snippets/Stats";
+import Stats from "../components/sections/Stats";
 import ImageWithText from "../components/sections/ImageWithText";
 import Pricing from "../components/sections/Pricing";
 import ContactUs from "../components/sections/ContactUs";
@@ -22,7 +22,10 @@ export const ShopifyLearnMore = () => {
         sectionId="shopify-hero"
       />
       <LayoutTabbedContent />
-      <Stats />
+      <Stats
+        title="Storefront Optimizations"
+        subtitle="We take a practical approach to storefront optimizations. We focus on what is most important to your business and what will help you grow. Below are some important metrics on the importance of an optimized Shopify storefront."
+      />
       <ImageWithText
         image={storeOpeningImg}
         title="Effortless Store Setup"

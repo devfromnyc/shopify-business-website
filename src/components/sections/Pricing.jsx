@@ -44,6 +44,9 @@ const Pricing = () => {
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
         }`}>
         Choose the perfect plan for your business needs and start growing today.
+        <br />
+        Below are just examples, we can always customize the plan to fit your
+        business needs!
       </p>
       <div className="flex flex-col md:flex-row gap-12">
         {pricingData.map((pricingTier, index) => (

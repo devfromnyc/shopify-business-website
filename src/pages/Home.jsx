@@ -16,7 +16,7 @@ export const Home = () => {
         subheader="Whatever your business needs, we've got you covered!"
         bullet1Text="Enhancing Your Shopify Store"
         bullet2Text="Strategic Partnerships"
-        bullet3Text="& Much much more!"
+        bullet3Text="Store setup & much much more!"
         alignContent="left"
       />
       <TextBlock

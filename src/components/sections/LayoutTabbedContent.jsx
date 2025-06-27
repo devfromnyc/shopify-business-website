@@ -149,11 +149,12 @@ const LayoutTabbedContent = () => {
         </h2>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
           Shopify's customizer is very powerful and allows us to add almost any
-          feature you need to extend your theme's capabilities.
+          feature you need to extend your theme's capabilities whether that be
+          new admin settings or completely custom sections!
           <br />
           <br />
-          Toggle between the different layouts below as an example of what
-          (endless) possibilities are! Hint: Check mobile view too!
+          Toggle the below settings to see how easy it can be to adjust the
+          layout of elements on your website too!
         </p>
       </div>
 

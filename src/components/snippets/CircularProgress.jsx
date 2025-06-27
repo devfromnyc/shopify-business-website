@@ -11,6 +11,7 @@ const CircularProgress = ({
   label = "",
   className = "",
   animate = false,
+  circleTitle = "",
 }) => {
   const [progress, setProgress] = useState(0);
 
@@ -76,6 +77,11 @@ const CircularProgress = ({
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center">
+        {circleTitle && (
+          <div className="text-base font-semibold text-gray-700 mb-1">
+            {circleTitle}
+          </div>
+        )}
         {showPercentage && (
           <div className="text-2xl font-bold text-gray-900 leading-none mb-1 sm:text-xl">
             {Math.round(progress)}%

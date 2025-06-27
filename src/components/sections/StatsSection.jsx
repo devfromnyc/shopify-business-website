@@ -35,10 +35,13 @@ const StatsSection = () => {
       <div className="max-w-7xl w-full mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Performance Metrics
+            Storefront Optimizations
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Scroll down to see our impressive statistics come to life
+            We take a practical approach to storefront optimizations. We focus
+            on what is most important to your business and what will help you
+            grow. There are many different ways to optimize your storefront,
+            below are just some examples!
           </p>
         </div>
 

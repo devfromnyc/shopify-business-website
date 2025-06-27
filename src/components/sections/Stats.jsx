@@ -1,13 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import CircularProgress from "./CircularProgress";
+import CircularProgress from "../snippets/CircularProgress";
 import { statsData } from "../../utils/statsData";
 
-const Stats = ({
-  title = "Our Performance Metrics",
-  subtitle = "Scroll down to see our impressive statistics come to life",
-  className = "",
-  stats = statsData,
-}) => {
+const Stats = ({ title, subtitle, className = "", stats = statsData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -41,9 +36,11 @@ const Stats = ({
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              {subtitle}
+            </p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
@@ -59,6 +56,11 @@ const Stats = ({
                 strokeWidth={10}
                 animate={isVisible}
               />
+              {stat.description && (
+                <p className="mt-4 text-base text-gray-600 leading-relaxed">
+                  {stat.description}
+                </p>
+              )}
             </div>
           ))}
         </div>
